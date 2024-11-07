@@ -1,7 +1,7 @@
 import CardServices from "./component/CardServices";
 import Navbar from "./component/Navbar";
 import "animate.css";
-import Carrusel from "./component/Carrusel"
+import Carrusel from "./component/Carrusel";
 function App() {
   return (
     // <div className="relative overflow-x-hidden">
@@ -197,7 +197,10 @@ function App() {
             ¡Contactar ya!
           </button>
         </div>
-        <img src="/public/main-hero.svg" className="max-w-[500px] drop-shadow-2xl " />
+        <img
+          src="/public/main-hero.svg"
+          className="max-w-[500px] drop-shadow-2xl "
+        />
       </div>
       {/* SVG SEPARATOR */}
       <svg
@@ -224,7 +227,6 @@ function App() {
       </svg>
       {/* SERVICOS */}
       <div className="p-6  bg-white w-full min-h-[800px]  flex flex-col justify-center items-center">
-        
         <h2 className="text-3xl sm:text-4xl md:text-5xl md:w-1/2 py-4 dynapuff-font text-center text-black">
           Los Servicios Que Brindamos Son Los Siguientes
         </h2>
@@ -246,12 +248,16 @@ function App() {
           <CardServices
             img={"/public/service4.svg"}
             title={"Redes Sociales"}
-            info={"Amplía tu alcance en las redes sociales. Creamos estrategias digitales para atraer nuevos clientes."}
+            info={
+              "Amplía tu alcance en las redes sociales. Creamos estrategias digitales para atraer nuevos clientes."
+            }
           />
           <CardServices
             img={"/public/service5.svg"}
             title={"Mantenimiento "}
-            info={"Mantenemos tu equipo funcionando al máximo. Servicio técnico especializado para computadoras, laptops, impresoras y más."}
+            info={
+              "Mantenemos tu equipo funcionando al máximo. Servicio técnico especializado para computadoras, laptops, impresoras y más."
+            }
           />
         </div>
       </div>
@@ -268,9 +274,114 @@ function App() {
         ></path>
       </svg>
       {/* PROYECTOS */}
-      
       <Carrusel />
-      
+      {/* SVG SEPARATOR */}
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className="rotate-180 fill-white -mb-1"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          className="shape-fill"
+        ></path>
+      </svg>
+      {/* NOSOTROS */}
+      <div className="p-6  bg-white w-full min-h-[800px]  flex flex-col justify-center items-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl md:w-1/2 py-4 dynapuff-font text-center text-black">
+          Nuestro Equipo
+        </h2>
+        <div className=" max-w-[1200px] m-auto flex flex-wrap gap-6 justify-evenly items-center ">
+
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
+            <img
+              src="https://i.pinimg.com/736x/20/36/4f/20364f4b4b36f6448c169c9aa38ec7e2.jpg"
+              alt=""
+              className="object-cover w-1/2 h-full rounded-xl"
+            />
+            <div className="flex flex-col gap-3 justify-between">
+              <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
+                wilson david barreto
+              </h5>
+              <h4 className="capitalize font-bold ">
+                Desarrollador web - full stack
+              </h4>
+              <a href="https://github.com/BarretoPalacios" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+                Github
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
+            <img
+              src="https://i.pinimg.com/736x/6a/c7/ec/6ac7ec70209247bbb116068b7ec54cce.jpg"
+              alt=""
+              className="object-cover w-1/2 h-full rounded-xl"
+            />
+            <div className="flex flex-col gap-3 justify-between">
+              <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
+                Daza firma luis ernesto
+              </h5>
+              <h4 className="capitalize font-bold ">
+                Desarrollador web - Backend 
+              </h4>
+              <a href="https://github.com/LuisErnesto1234" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+                Github
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
+            <img
+              src="https://i.pinimg.com/736x/14/1a/e1/141ae10b746c2d5f5022ccc2cdf0abdc.jpg"
+              alt=""
+              className="object-cover w-1/2 h-full rounded-xl"
+            />
+            <div className="flex flex-col gap-3 justify-between">
+              <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
+                Rojas Rahi Carlos Ostin
+              </h5>
+              <h4 className="capitalize font-bold ">
+                Desarrollador web - Backend
+              </h4>
+              <a href="https://github.com/Rahi-Rojas" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+                Github
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
+            <img
+              src="https://i.pinimg.com/736x/13/3c/31/133c31c5babdb4027bf1a172e94ef2a1.jpg"
+              alt=""
+              className="object-cover w-1/2 h-full rounded-xl"
+            />
+            <div className="flex flex-col gap-3 justify-between">
+              <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
+                Ganoza Sebastian 
+              </h5>
+              <h4 className="capitalize font-bold ">
+                Desarrollador web - Databases
+              </h4>
+              <a href="https://github.com/SebastianGanoza21" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+                Github
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* SVG SEPARATOR */}
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+        className=" fill-white"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          className="shape-fill"
+        ></path>
+      </svg>
     </div>
   );
 }
