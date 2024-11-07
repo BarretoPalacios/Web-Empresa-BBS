@@ -9,7 +9,7 @@ function Navbar() {
       <div className="z-10 fixed top-0 left-0 right-0 mt-4 m-auto bg-white rounded-full w-full max-w-[1200px]  flex items-center justify-between flex-wrap  sm:justify-evenly p-6 shadow-lg">
         {/* logo de la empresa */}
         <Link to={"/"} className="">
-          <img src="public/logo-icon-blue.svg" alt="" className="max-w-10" />
+          <img src="logo-icon-blue.svg" alt="" className="max-w-10" />
         </Link>
         {/* links del navbar  */}
         <div className="hidden sm:flex justify-evenly gap-4 w-3/4 ">
