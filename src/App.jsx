@@ -198,7 +198,7 @@ function App() {
           </button>
         </div>
         <img
-          src="/public/main-hero.svg"
+          src="main-hero.svg"
           className="max-w-[500px] drop-shadow-2xl "
         />
       </div>
@@ -232,28 +232,28 @@ function App() {
         </h2>
         <div className=" max-w-[1200px] m-auto  flex flex-wrap gap-6 justify-evenly items-center ">
           <CardServices
-            img={"/public/service2.svg"}
+            img={"service2.svg"}
             title={"Sistema a Medida"}
             info={
               "Soluciones tecnológicas personalizadas. Diseñamos y desarrollamos sistemas a la medida de tus necesidades, optimizando tus procesos."
             }
           />
           <CardServices
-            img={"/public/service3.svg"}
+            img={"service3.svg"}
             title={"Automatizaciones"}
             info={
               "Potencia tu negocio con automatizaciones. Olvídate de las tareas repetitivas y céntrate en lo que realmente importa."
             }
           />
           <CardServices
-            img={"/public/service4.svg"}
+            img={"service4.svg"}
             title={"Redes Sociales"}
             info={
               "Amplía tu alcance en las redes sociales. Creamos estrategias digitales para atraer nuevos clientes."
             }
           />
           <CardServices
-            img={"/public/service5.svg"}
+            img={"service5.svg"}
             title={"Mantenimiento "}
             info={
               "Mantenemos tu equipo funcionando al máximo. Servicio técnico especializado para computadoras, laptops, impresoras y más."
