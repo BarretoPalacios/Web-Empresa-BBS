@@ -187,7 +187,7 @@ function App() {
             className="text-5xl dynapuff-font  text-white 
           animate__animated animate__rubberBand animate__repeat-1 animate__slower "
           >
-            Deja que la tecnología trabaje por ti.
+            Deja que la tecnología trabaje por ti...
           </h1>
 
           <h2 className="text-2xl dynapuff-font  text-white">
