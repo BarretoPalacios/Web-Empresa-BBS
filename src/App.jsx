@@ -193,14 +193,16 @@ function App() {
           <h2 className="text-2xl dynapuff-font  text-white">
             Optimizamos tus procesos para maximizar tus resultados.
           </h2>
-          <button className="w-fit p-5 rounded-full bg-white text-black font-bold  text-xl">
+          <a
+            href="https://wa.me/51933238447?text=Hola,%20vi%20tu%20página%20web%20y%20estoy%20interesado%20en%20tus%20servicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit p-5 rounded-full bg-white text-black font-bold  text-xl"
+          >
             ¡Contactar ya!
-          </button>
+          </a>
         </div>
-        <img
-          src="main-hero.svg"
-          className="max-w-[500px] drop-shadow-2xl "
-        />
+        <img src="main-hero.svg" className="max-w-[500px] drop-shadow-2xl " />
       </div>
       {/* SVG SEPARATOR */}
       <svg
@@ -232,13 +234,6 @@ function App() {
         </h2>
         <div className=" max-w-[1200px] m-auto  flex flex-wrap gap-6 justify-evenly items-center ">
           <CardServices
-            img={"service2.svg"}
-            title={"Sistema a Medida"}
-            info={
-              "Soluciones tecnológicas personalizadas. Diseñamos y desarrollamos sistemas a la medida de tus necesidades, optimizando tus procesos."
-            }
-          />
-          <CardServices
             img={"service3.svg"}
             title={"Automatizaciones"}
             info={
@@ -246,10 +241,10 @@ function App() {
             }
           />
           <CardServices
-            img={"service4.svg"}
-            title={"Redes Sociales"}
+            img={"service2.svg"}
+            title={"Sistema a Medida"}
             info={
-              "Amplía tu alcance en las redes sociales. Creamos estrategias digitales para atraer nuevos clientes."
+              "Soluciones tecnológicas personalizadas. Diseñamos y desarrollamos sistemas a la medida de tus necesidades, optimizando tus procesos."
             }
           />
           <CardServices
@@ -294,12 +289,12 @@ function App() {
           Nuestro Equipo
         </h2>
         <div className=" max-w-[1200px] m-auto flex flex-wrap gap-6 justify-evenly items-center ">
-
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
             <img
-              src="https://i.pinimg.com/736x/20/36/4f/20364f4b4b36f6448c169c9aa38ec7e2.jpg"
+              src="https://doodleipsum.com/700/avatar-4?i=9ed28606f4304a20665c51f4230a633a"
+              // src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64cd4d0257f3906c2314e093_roboto.png"
               alt=""
-              className="object-cover w-1/2 h-full rounded-xl"
+              className="object-cover w-1/2 h-full rounded-xl border"
             />
             <div className="flex flex-col gap-3 justify-between">
               <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
@@ -308,34 +303,44 @@ function App() {
               <h4 className="capitalize font-bold ">
                 Desarrollador web - full stack
               </h4>
-              <a href="https://github.com/BarretoPalacios" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+              <a
+                href="https://github.com/BarretoPalacios"
+                target="true"
+                className="text-center bg-[#3836FE] text-white font-bold p-2 rounded-lg"
+              >
                 Github
               </a>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
             <img
-              src="https://i.pinimg.com/736x/6a/c7/ec/6ac7ec70209247bbb116068b7ec54cce.jpg"
+              src="https://doodleipsum.com/700/avatar-4?i=0dc89625a8d63095bea8a5511a2aab2d"
+              // src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64cd4d1949333dd65b97493f_waiting.png"
               alt=""
-              className="object-cover w-1/2 h-full rounded-xl"
+              className="object-cover w-1/2 h-full rounded-xl border"
             />
             <div className="flex flex-col gap-3 justify-between">
               <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
                 Daza firma luis ernesto
               </h5>
               <h4 className="capitalize font-bold ">
-                Desarrollador web - Backend 
+                Desarrollador web - Backend
               </h4>
-              <a href="https://github.com/LuisErnesto1234" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+              <a
+                href="https://github.com/LuisErnesto1234"
+                target="true"
+                className="text-center bg-[#3836FE] text-white font-bold p-2 rounded-lg"
+              >
                 Github
               </a>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
             <img
-              src="https://i.pinimg.com/736x/14/1a/e1/141ae10b746c2d5f5022ccc2cdf0abdc.jpg"
+              src="https://doodleipsum.com/700/avatar-4?i=6e4392ed857ee939993024e3a174f183"
+              // src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64cd4b9065d907b296812105_groceries.png"
               alt=""
-              className="object-cover w-1/2 h-full rounded-xl"
+              className="object-cover w-1/2 h-full rounded-xl border"
             />
             <div className="flex flex-col gap-3 justify-between">
               <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
@@ -344,25 +349,34 @@ function App() {
               <h4 className="capitalize font-bold ">
                 Desarrollador web - Backend
               </h4>
-              <a href="https://github.com/Rahi-Rojas" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+              <a
+                href="https://github.com/Rahi-Rojas"
+                target="true"
+                className="text-center bg-[#3836FE] text-white font-bold p-2 rounded-lg"
+              >
                 Github
               </a>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">
             <img
-              src="https://i.pinimg.com/736x/13/3c/31/133c31c5babdb4027bf1a172e94ef2a1.jpg"
+              src="https://doodleipsum.com/700/avatar-4?i=6308da9791a4ed11a2c56d2554d02810"
+              // src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d190d6faa5e45333b85ae6_pacheco.png"
               alt=""
-              className="object-cover w-1/2 h-full rounded-xl"
+              className="object-cover w-1/2 h-full rounded-xl border"
             />
             <div className="flex flex-col gap-3 justify-between">
               <h5 className="capitalize font-bold text-2xl  text-[#3836FE]">
-                Ganoza Sebastian 
+                Ganoza Sebastian
               </h5>
               <h4 className="capitalize font-bold ">
                 Desarrollador web - Databases
               </h4>
-              <a href="https://github.com/SebastianGanoza21" target="true" className="bg-[#3836FE] text-white font-bold p-2 rounded-lg">
+              <a
+                href="https://github.com/SebastianGanoza21"
+                target="true"
+                className="text-center bg-[#3836FE] text-white font-bold p-2 rounded-lg"
+              >
                 Github
               </a>
             </div>

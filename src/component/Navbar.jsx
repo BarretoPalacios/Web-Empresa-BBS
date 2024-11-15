@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="z-10 fixed top-0 left-0 right-0 mt-4 m-auto bg-white rounded-full w-full max-w-[1200px]  flex items-center justify-between flex-wrap  sm:justify-evenly p-6 shadow-lg">
+      <nav className="z-10 fixed top-0 left-0 right-0 mt-4 m-auto bg-white rounded-full w-full max-w-[1200px]  flex items-center justify-between flex-wrap  sm:justify-evenly p-6 shadow-lg">
         {/* logo de la empresa */}
         <Link to={"/"} className="">
           <img src="logo-icon-blue.svg" alt="" className="max-w-10" />
@@ -20,13 +20,13 @@ function Navbar() {
             to={"/projects"}
             className="text-[#3836fe] capitalize font-medium"
           >
-            Projects
+            Projectos
           </Link>
           <Link
             to={"/services"}
             className="text-[#3836fe] capitalize font-medium"
           >
-            Services
+            Servicios
           </Link>
           <Link to={"/more"} className="text-[#3836fe] capitalize font-medium">
             Nosotros
@@ -166,7 +166,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

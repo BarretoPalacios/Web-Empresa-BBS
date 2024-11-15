@@ -1,31 +1,30 @@
-'use client'
-
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Carrusel = () => {
   const projects = [
     {
-      title: "Diana.Lu",
-      description: "Gestionamos el inventario para la facilidad de conteo y evitar errores Gestionamos el inventario",
-      tags: ["Sitio Web", "47 Dias"],
-      important:["Agradable","Optimizaciones de Tiempo","Diseño Agradable"],
-      image: "https://klart.io/api/pixels/652e2aa429b5d822b1eced5a/image.png"
+      "title": "Sistema de Convenios",
+      "description": "Una plataforma para gestionar y facilitar los convenios entre diferentes entidades, optimizando el control de inventario y reduciendo el margen de error en conteos y registros.",
+      "tags": ["Sitio Web", "47 Días"],
+      "important": ["Agradable", "Optimizaciones de Tiempo", "Diseño Agradable"],
+      "image": "/imgs/projecto1.png"
     },
     {
-      title: "Project Two",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-      tags: ["Design", "30 Dias"],
-      important:["Agradable","Diseño Agradable","Empresa en Crecimiento","Otros datos"],
-      image: "https://img.freepik.com/foto-gratis/surfista-valiente-montando-ola_1098-1448.jpg?t=st=1730558498~exp=1730562098~hmac=1eaa81431744cf94a2925b821f5033bc1252ef31273c342f10e03d3670d57a2e&w=740"
+      "title": "Sistema de Gestión de Inventario",
+      "description": "Un sistema robusto y adaptable para la administración eficiente de inventarios. Incluye herramientas para el seguimiento de productos, control de existencias y generación de reportes en tiempo real.",
+      "tags": ["Design", "30 Días"],
+      "important": ["Agradable", "Diseño Agradable", "Optimización de Recursos"],
+      "image": "/imgs/projecto2.png"
     },
     {
-      title: "Project Three",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      tags: ["Development", "60 Dias"],
-      important:["Optimizaciones de Tiempo","Diseño Agradable"],
-      image: "https://img.freepik.com/foto-gratis/imagen-primer-plano-programador-trabajando-su-escritorio-oficina_1098-18707.jpg?t=st=1730558362~exp=1730561962~hmac=31dd3f18fd303d44e9d8671465b7a6a471f24f5290235a5a1059afbb1b51be80&w=740"
+      "title": "Sistema Control de Agua",
+      "description": "Plataforma diseñada para el monitoreo y control del consumo de agua en infraestructuras urbanas. Ofrece alertas y reportes de uso, promoviendo el ahorro y la sostenibilidad.",
+      "tags": ["Development", "60 Días"],
+      "important": ["Optimizaciones de Tiempo", "Diseño Agradable", "Control de Recursos Naturales"],
+      "image": "/imgs/projecto3.jpg"
     }
-  ];
+  ]
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(null);
@@ -58,9 +57,9 @@ const Carrusel = () => {
   const handleTouchEnd = () => {
     if (touchStartX.current && touchEndX.current) {
       const difference = touchStartX.current - touchEndX.current;
-      if (difference > 50) {
+      if (difference > 70) {
         nextSlide();
-      } else if (difference < -50) {
+      } else if (difference < -70) {
         prevSlide();
       }
     }
@@ -83,11 +82,11 @@ const Carrusel = () => {
         onTouchEnd={handleTouchEnd}
       >
         <div className="flex flex-col md:flex-row transition-transform duration-300 ease-in-out">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 bg-white" >
             <img
               src={currentProject.image}
               alt={currentProject.title}
-              className="w-full h-48 md:h-96 object-cover"
+              className="w-full h-48 md:h-full object-cover"
             />
           </div>
           <div className="w-full md:w-1/2 p-6 flex flex-col justify-between bg-white">
