@@ -44,7 +44,7 @@ function App() {
             href="https://wa.me/51933238447?text=Hola,%20vi%20tu%20página%20web%20y%20estoy%20interesado%20en%20tus%20servicios"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit p-5 rounded-full bg-white text-black font-bold  text-xl"
+            className="w-fit p-5 rounded-full bg-black text-white font-bold  text-xl"
           >
             ¡Contactar ya!
           </a>
@@ -76,8 +76,9 @@ function App() {
       </svg>
       {/* SERVICOS */}
       <div className="p-6  bg-white w-full min-h-[800px]  flex flex-col justify-center items-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl md:w-1/2 py-4 dynapuff-font text-center text-black">
-          Los Servicios Que Brindamos Son Los Siguientes
+        <h2 className="text-4xl  md:text-5xl md:w-1/2 py-8 md:py5 dynapuff-font text-center text-black">
+           Servicios Que 
+           <b className="text-[#3836FE]"> Brindamos</b>
         </h2>
         <div className=" max-w-[1200px] m-auto  flex flex-wrap gap-6 justify-evenly items-center ">
           <CardServices
@@ -132,8 +133,9 @@ function App() {
       </svg>
       {/* NOSOTROS */}
       <div className="p-6  bg-white w-full min-h-[800px]  flex flex-col justify-center items-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl md:w-1/2 py-4 dynapuff-font text-center text-black">
-          Nuestro Equipo
+        <h2 className="text-4xl  md:text-5xl w-1/2 md:w-full py-8 md:py-12 dynapuff-font text-center text-black">
+          Nuestro 
+          <b className="text-[#3836FE]"> Equipo</b>
         </h2>
         <div className=" max-w-[1200px] m-auto flex flex-wrap gap-6 justify-evenly items-center ">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-4 shadow-xl rounded-xl w-full sm:w-96 h-auto sm:h-56">

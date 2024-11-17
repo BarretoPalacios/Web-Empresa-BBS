@@ -71,8 +71,8 @@ const Carrusel = () => {
 
   return (
    <>
-    <h2 className="text-3xl sm:text-4xl md:text-5xl md:w-1/2 py-4 dynapuff-font text-center text-white min-w-full ">
-    Proyectos Recientes
+    <h2 className="m-auto w-1/2 md:w-full text-4xl  md:text-5xl py-8 md:py-12 dynapuff-font text-center text-white ">
+       Proyectos Recientes
   </h2>
     <div className="w-full max-w-4xl mx-auto px-4 py-8 relative">
       <div 
