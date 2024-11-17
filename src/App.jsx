@@ -4,181 +4,28 @@ import "animate.css";
 import Carrusel from "./component/Carrusel";
 function App() {
   return (
-    // <div className="relative overflow-x-hidden">
-    //   <div className="absolute -top-40 -left-40 w-80 h-80 border-solid border-[80px] border-white rounded-full shadow-2xl"></div>
-    //   <div className=" absolute top-[450px] -right-40 w-80 h-80 border-solid border-[80px] border-white rounded-full rotate-180 shadow-2xl"></div>
-
-    //   <Navbar />
-    //   <div className="bg-[#99CCFF] flex gap-5 flex-wrap justify-evenly items-center p-4 pt-20 h-full min-h-screen dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black">
-    //     <h1 className=" text-start z-10 font-cherryFont text-9xl text-white drop-shadow-2xl ">
-    //       InspyDev <br />
-    //       <span className="text-[#003366] dark:text-[#99CCFF]">
-    //         Services
-    //       </span>
-    //       <br />
-    //     </h1>
-    //     <div className="animate-float z-10  max-w-96 h-auto flex p-4 justify-center items-center rounded-2xl ">
-    //       <img className="w-full drop-shadow-xl" src={ImgBaner} alt="" />
-    //     </div>
-    //   </div>
-    //   <div className="bg-[#99CCFF] flex flex-wrap justify-center gap-5  p-4">
-    //       <a
-    //         href={`https://wa.me/51933238447`}
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //         className="z-10 hover:scale-105 transition-transform shadow-lg bg-gradient-to-b from-sky-400 to-sky-200 dark:bg-gradient-to-t dark:from-gray-900 dark:to-gray-600 flex justify-center gap-4  p-4 rounded-full text-white font-bold text-center"
-    //       >
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           width={24}
-    //           height={24}
-    //           viewBox="0 0 24 24"
-    //           fill="none"
-    //           stroke="currentColor"
-    //           strokeWidth={2}
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
-    //         >
-    //           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    //           <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-    //           <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-    //         </svg>
-    //         Contactar por WhatsApp
-    //       </a>
-    //       <br />
-    //       <a
-    //         href={`mailto:david11barreto11@gmail.com`}
-    //         className="hover:scale-105 transition-transform shadow-lg bg-gradient-to-b from-sky-400 to-sky-200 dark:bg-gradient-to-t dark:from-gray-900 dark:to-gray-600 flex justify-center gap-4  p-4 rounded-full text-white font-bold text-center"
-    //       >
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           width={24}
-    //           height={24}
-    //           viewBox="0 0 24 24"
-    //           fill="none"
-    //           stroke="currentColor"
-    //           strokeWidth={2}
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
-    //         >
-    //           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    //           <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-    //           <path d="M3 7l9 6l9 -6" />
-    //         </svg>
-    //         Enviar Correo
-    //       </a>
-    //       <br />
-    //       <a
-    //         href={`tel:51933238447`}
-    //         className="hover:scale-105 transition-transform shadow-lg bg-gradient-to-b from-sky-400 to-sky-200 dark:bg-gradient-to-t dark:from-gray-900 dark:to-gray-600 flex justify-center gap-4  p-4 rounded-full text-white font-bold text-center"
-    //       >
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           width={24}
-    //           height={24}
-    //           viewBox="0 0 24 24"
-    //           fill="none"
-    //           stroke="currentColor"
-    //           strokeWidth={2}
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           className="icon icon-tabler icons-tabler-outline icon-tabler-phone"
-    //         >
-    //           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    //           <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-    //         </svg>
-    //         Llamar
-    //       </a>
-    //     </div>
-    //   <div className="bg-[#99CCFF] flex gap-5 items-center flex-wrap justify-evenly h-full min-h-screen dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black">
-    //     <h1 className="w-full h-40 pt-6 pb-6 text-center z-10 font-cherryFont text-7xl text-[#003366] dark:text-[#99CCFF] drop-shadow-sm ">
-    //       Servicios
-    //     </h1>
-    //     <CardServices
-    //       img={servicio1Img}
-    //       title={"Sistemas Web"}
-    //       info={
-    //         "creamos sistemas web completos como ERP, POS, E-COMERCE,etc..."
-    //       }
-    //     />
-    //     <CardServices
-    //       img={servicio2Img}
-    //       title={"Sitios Web"}
-    //       info={
-    //         "creamos webs a medida y de acuerdo al rubro de tu empresa o negocio..."
-    //       }
-    //     />
-    //     <CardServices
-    //       img={servicio3Img}
-    //       title={"Automatizaciones"}
-    //       info={
-    //         "automatizaciones de tareas repetitivas y manejo de documentos..."
-    //       }
-    //     />
-    //   </div>
-
-    //   <div className="pt-4 pb-4 bg-[#99CCFF] flex gap-5 items-center flex-wrap justify-evenly h-full min-h-screen dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black ">
-    //     <h1 className="w-full h-40 p-6 text-center z-10 font-cherryFont text-7xl text-[#003366] dark:text-[#99CCFF] drop-shadow-sm ">
-    //       Projectos
-    //     </h1>
-    //     <CardProjects
-    //       titulo={"POS system"}
-    //       info={
-    //         "creamos un sistema de automatizacion de archivos WORD,EXCEL y PDF para una escuela "
-    //       }
-    //       img={projecto1}
-    //       projectname={"system.js"}
-    //     />
-    //     <CardProjects
-    //       titulo={"Automatizacion"}
-    //       info={
-    //         "creamos un sistema de automatizacion de archivos WORD,EXCEL y PDF para una escuela "
-    //       }
-    //       img={projecto2}
-    //       projectname={"script.py"}
-    //     />
-
-    //     <CardProjects
-    //       titulo={"Sitio Web Aura.com"}
-    //       info={
-    //         "creamos un sistema de automatizacion de archivos WORD,EXCEL y PDF para una escuela "
-    //       }
-    //       img={projecto3}
-    //       projectname={"site.html"}
-    //     />
-    //   </div>
-
-    //   <div className="p-6 bg-[#99CCFF] flex gap-5 items-center flex-wrap justify-evenly h-full min-h-screen dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black">
-    //     <h1 className="w-full h-40 p-4 text-center z-10 font-cherryFont text-7xl text-[#003366] dark:text-[#99CCFF] drop-shadow-sm ">
-    //       Nosotros
-    //     </h1>
-    //     <p className="font-cherryFont text-4xl w-[30ch] text-[#003366] dark:text-white">
-    //       Somos un grupo de 5 Programadores que no saben programar , el grupo lo
-    //       conforma Rojas alias
-    //       <b className="italic text-[#336699]">"El legeador"</b> , Daza alias
-    //       <b className="italic text-[#336699]">"El Profesor"</b> ,Gabino alias
-    //       <b className="italic text-[#336699]">"el Heroico"</b> , Sebas alias
-    //       <b className="italic text-[#336699]">"el mr Figma"</b>, y yo alias
-    //       <b className="italic text-[#336699]">"Bolaños"</b>
-
-    //     </p>
-    //     <img
-    //       className="animate-float max-w-96 drop-shadow-xl"
-    //       src={nosotroimg}
-    //       alt="foto de los programadores"
-    //     />
-    //   </div>
-
-    //   <div className="pt-4 pb-4 bg-[#99CCFF] flex gap-5 items-center flex-wrap justify-evenly h-full min-h-screen dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black ">
-    //     <h1 className="w-full h-40 p-6 text-center z-10 font-cherryFont text-7xl text-[#003366] dark:text-[#99CCFF] drop-shadow-sm ">
-    //       Contacto
-    //     </h1>
-
-    //   </div>
-    // </div>
-    <div className="w-full  bg-[#3836FE] ">
+    <div className="w-full relative bg-[#3836FE] ">
+      <a
+        href="https://wa.me/51933238447?text=Hola,%20vi%20tu%20página%20web%20y%20estoy%20interesado%20en%20tus%20servicios"
+        className="z-30 fixed  bottom-2 right-2 bg-black p-4 rounded-full animate-bounce "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={24}
+          height={24}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp "
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+        </svg>
+      </a>
       <Navbar />
       {/* INICIO O HERO IMAGE */}
       <div className="bg-[#3836FE]  m-auto w-full max-w-[1200px] min-h-[800px] pt-32 lg:p-0  flex flex-wrap gap-6 justify-evenly items-center ">
