@@ -13,24 +13,24 @@ function Navbar() {
         </Link>
         {/* links del navbar  */}
         <div className="hidden sm:flex justify-evenly gap-4 w-3/4 ">
-          <Link to={"/"} className=" text-white capitalize font-medium">
+          <a href={"/"} className=" text-white capitalize font-medium">
             Inicio
-          </Link>
-          <Link
-            to={"/projects"}
+          </a>
+          <a
+            href={"/projects"}
             className="text-[#3836fe] capitalize font-medium"
           >
             Projectos
-          </Link>
-          <Link
-            to={"/services"}
+          </a>
+          <a
+            href={"/services"}
             className="text-[#3836fe] capitalize font-medium"
           >
             Servicios
-          </Link>
-          <Link to={"/more"} className="text-[#3836fe] capitalize font-medium">
+          </a>
+          <a href={"/more"} className="text-[#3836fe] capitalize font-medium">
             Nosotros
-          </Link>
+          </a>
         </div>
         {/* boton de menu */}
         <button className="sm:hidden" onClick={() => setIsOpen(true)}>
@@ -80,8 +80,8 @@ function Navbar() {
           } z-20 absolute left-0 right-0 overflow-hidden -top-4 bottom-0 w-full h-screen  justify-center items-center bg-black/60 `}
         >
           <div className="w-full max-w-xs flex flex-col px-6 py-10 gap-5 rounded-md bg-white">
-            <Link
-              to={"/"}
+            <a
+              href={"/"}
               className=" text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
             >
               <svg
@@ -100,9 +100,9 @@ function Navbar() {
                 <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
               </svg>
               Inicio
-            </Link>
-            <Link
-              to={"/projects"}
+            </a>
+            <a
+              href={"/projects"}
               className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
             >
               <svg
@@ -121,9 +121,9 @@ function Navbar() {
                 <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
               </svg>
               Projects
-            </Link>
-            <Link
-              to={"/services"}
+            </a>
+            <a
+              href={"/services"}
               className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
             >
               <svg
@@ -142,9 +142,9 @@ function Navbar() {
                 <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
               </svg>
               Services
-            </Link>
-            <Link
-              to={"/more"}
+            </a>
+            <a
+              href={"/more"}
               className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
             >
               <svg
@@ -163,7 +163,7 @@ function Navbar() {
                 <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
               </svg>
               Nosotros
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
