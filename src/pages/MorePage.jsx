@@ -26,7 +26,6 @@ function MorePage() {
         </svg>
       </a>
       <div className="pt-36 flex  flex-col  items-center w-full gap-10 bg-[#3836FE] flex-wrap overflow-hidden">
-
         <img
           src="logo-icon-white.svg"
           className="max-w-[200px] md:max-w-[350px] drop-shadow-xl hover:scale-105 transition-transform"
@@ -59,6 +58,59 @@ function MorePage() {
           className="shape-fill"
         ></path>
       </svg>
+      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
+        Historia
+      </h3>
+      <p className="w-full p-4 md:max-w-2xl  m-auto">
+        Nova Solutions nació con la firme convicción de que no solo los adultos
+        pueden lograr grandes cosas. Creemos que todo lo que se necesita es un
+        objetivo que inspire nuestra mente y corazón, y, por supuesto, mucho
+        esfuerzo. Somos un grupo de jóvenes con una visión a largo plazo,
+        dispuestos a desafiar todo obstáculo que se nos presente. <br />
+        No sabemos qué nos deparará el futuro, pero sabemos que nuestra
+        determinación y nuestras ganas de aprender y crecer nos llevarán a
+        alcanzar grandes logros. Nuestro propósito es llevar nuestro
+        conocimiento a lugares donde se pueda hacer una diferencia real y
+        brindar soluciones que hagan la vida más fácil a nuestros clientes. En
+        Nova Solutions, no nos rendimos ante los desafíos; más bien, los
+        enfrentamos con pasión, creatividad y el deseo de mejorar el mundo que
+        nos rodea.
+      </p>
+      <img
+        src="/history.svg"
+        alt=""
+        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
+      />
+      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
+        Mision
+      </h3>
+      <p className="w-full p-4 md:max-w-2xl  m-auto">
+        La misión de Nova Solutions es ofrecer soluciones innovadoras y
+        accesibles que faciliten la vida de nuestros clientes, aprovechando el
+        conocimiento y la pasión de un equipo joven y comprometido con el
+        futuro. Nos esforzamos por transformar desafíos en oportunidades a
+        través de la tecnología, el esfuerzo y el trabajo en equipo.
+      </p>
+      <img
+        src="/mision.svg"
+        alt=""
+        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
+      />
+      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
+        Vision
+      </h3>
+      <p className="w-full p-4 md:max-w-2xl  m-auto">
+        La visión de Nova Solutions es convertirnos en una startup tecnológica
+        líder, especializada en la automatización de procesos. Queremos ser
+        reconocidos por desarrollar soluciones innovadoras que optimicen la
+        eficiencia y productividad de las empresas, ayudándolas a enfrentar los
+        desafíos del futuro de manera más ágil y efectiva.
+      </p>
+      <img
+        src="/vision.svg"
+        alt=""
+        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
+      />
     </div>
   );
 }
