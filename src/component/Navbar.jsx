@@ -13,24 +13,24 @@ function Navbar() {
         </Link>
         {/* links del navbar  */}
         <div className="hidden sm:flex justify-evenly gap-4 w-3/4 ">
-          <a to={"/"} className=" text-white capitalize font-medium">
+          <Link to={"/"} className=" text-white capitalize font-medium">
             Inicio
-          </a>
-          <a
+          </Link>
+          <Link
             to={"/projects"}
             className="text-[#3836fe] capitalize font-medium"
           >
             Projectos
-          </a>
-          <a
+          </Link>
+          <Link
             to={"/services"}
             className="text-[#3836fe] capitalize font-medium"
           >
             Servicios
-          </a>
-          <a to={"/more"} className="text-[#3836fe] capitalize font-medium">
+          </Link>
+          <Link to={"/more"} className="text-[#3836fe] capitalize font-medium">
             Nosotros
-          </a>
+          </Link>
         </div>
         {/* boton de menu */}
         <button className="sm:hidden" onClick={() => setIsOpen(true)}>
