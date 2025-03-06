@@ -11,6 +11,25 @@ import ProjectModal from "./ProjectModal";
 // Sample project data
 const projects = [
   {
+    id: 5,
+    title: "Sitio Web para Gimnasio",
+    description:
+      "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información sobre membresías, clases, entrenadores, horarios y promociones especiales. Además, cuenta con un apartado de contacto para consultas y reservas, así como una galería de imágenes para mostrar las instalaciones y servicios. Su objetivo es atraer nuevos clientes y ofrecer una experiencia digital atractiva y funcional para los usuarios.",
+    thumbnail: "/imgs/projects/p12-img.jpg",
+    duration: "2 Dias",
+    technologies: ["React Vite", "Tailwind", "Cloudflare"],
+    websiteUrl: "https://powergym.pages.dev/",
+    repoUrl: "https://github.com/BarretoPalacios/Power-Gym",
+    isPrivate: false,
+    images: [
+      "/imgs/projects/p12-img.jpg",
+      "/imgs/projects/p13-img.jpg",
+      "/imgs/projects/p14-img.jpg",
+    ],
+    fullDescription:
+      "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información detallada sobre membresías, clases grupales, entrenadores personales, horarios y promociones especiales. Además, cuenta con un apartado de contacto para consultas y reservas, así como una galería de imágenes para mostrar las instalaciones y servicios. Su objetivo es atraer nuevos clientes y ofrecer una experiencia digital atractiva y funcional para los usuarios, facilitando la interacción y el acceso a información relevante sobre el gimnasio."
+  },
+  {
     id: 1,
     title: "Sitio Web de Sistemas contra Incendios",
     description:
@@ -79,8 +98,7 @@ const projects = [
     ],
     fullDescription:
       "En La Casa de Salam, hemos desarrollado un Sistema de Venta de Productos para Mascotas que lo tiene todo. Nuestra plataforma está diseñada para ofrecer una experiencia de compra fácil y rápida, con una amplia variedad de productos para todo tipo de mascotas: alimentos, accesorios, juguetes, medicamentos y más. Con un diseño intuitivo y seguro, los clientes pueden explorar categorías, filtrar por necesidades específicas y realizar compras en pocos clics. Además, incluimos funcionalidades como recomendaciones personalizadas, envíos rápidos y un sistema de seguimiento de pedidos. La Casa de Salam es la solución perfecta para quienes buscan lo mejor para sus mascotas.",
-  },
-  
+  }
 ];
 
 export default function Projects() {
