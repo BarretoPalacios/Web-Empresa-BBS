@@ -62,7 +62,7 @@ function MorePage() {
         Historia
       </h3>
       <p className="w-full p-4 md:max-w-2xl  m-auto">
-        Nova Solutions nació con la firme convicción de que no solo los adultos
+        Nova Solutions RUC:20613267493 nació con la firme convicción de que no solo los adultos
         pueden lograr grandes cosas. Creemos que todo lo que se necesita es un
         objetivo que inspire nuestra mente y corazón, y, por supuesto, mucho
         esfuerzo. Somos un grupo de jóvenes con una visión a largo plazo,
