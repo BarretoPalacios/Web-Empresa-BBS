@@ -80,7 +80,7 @@ export default function Footer() {
                     <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                   </svg>
                 </a>
-                <a href='htpps://www.tiktok.com/@webnovasolutions' target="_blank" rel="noopener noreferrer"  className="bg-gray-800 p-2 rounded-full hover:bg-[#3836FE] transition-colors">
+                <a href='https://www.tiktok.com/@webn0va?_t=ZM-8y5OhbGhrZY&_r=1' target="_blank" rel="noopener noreferrer"  className="bg-gray-800 p-2 rounded-full hover:bg-[#3836FE] transition-colors">
                   <svg className="w-6 h-6 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="white">
   <path d="M41.6 16.2c-2.8-.2-5.3-1.3-7.4-3.1-1.9-1.8-3.1-4.1-3.5-6.7-.1-.6-.2-1.3-.2-2H24v31.7c0 1.9-1.6 3.5-3.5 3.5-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5c.5 0 1 .1 1.5.3v-7c-.5-.1-1-.1-1.5-.1-5.7 0-10.3 4.6-10.3 10.3s4.6 10.3 10.3 10.3 10.3-4.6 10.3-10.3V18.2c2.7 1.6 5.9 2.5 9.3 2.5v-4.5z"/>
 </svg>
