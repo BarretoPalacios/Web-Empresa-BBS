@@ -1,26 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-.dynapuff-font {
-  font-family: "DynaPuff", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+html {
+  scroll-behavior: smooth;
+  font-family: fredoka, sans-serif;
 }
-
-
-.card_project{
-
-  width: 100%;
-  max-width: 300px;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 20px;
-  clip-path: polygon(0 0, 49% 0, 66% 20%, 100% 20%, 100% 70%, 100% 100%, 0 100%);
-}
-

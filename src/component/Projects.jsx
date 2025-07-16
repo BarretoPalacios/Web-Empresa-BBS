@@ -14,7 +14,7 @@ const projects = [
     id: 5,
     title: "Sitio Web para Gimnasio",
     description:
-      "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información sobre membresías, clases, entrenadores, horarios y promociones especiales. Además, cuenta con un apartado de contacto para consultas y reservas, así como una galería de imágenes para mostrar las instalaciones y servicios. Su objetivo es atraer nuevos clientes y ofrecer una experiencia digital atractiva y funcional para los usuarios.",
+      "Plataforma digital para promocionar y gestionar un gimnasio moderno con información sobre membresías, clases, entrenadores y más.",
     thumbnail: "/imgs/projects/p12-img.jpg",
     duration: "2 Dias",
     technologies: ["React Vite", "Tailwind", "Cloudflare"],
@@ -27,16 +27,16 @@ const projects = [
       "/imgs/projects/p14-img.jpg",
     ],
     fullDescription:
-      "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información detallada sobre membresías, clases grupales, entrenadores personales, horarios y promociones especiales. Además, cuenta con un apartado de contacto para consultas y reservas, así como una galería de imágenes para mostrar las instalaciones y servicios. Su objetivo es atraer nuevos clientes y ofrecer una experiencia digital atractiva y funcional para los usuarios, facilitando la interacción y el acceso a información relevante sobre el gimnasio."
+      "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información detallada sobre membresías, clases grupales, entrenadores personales, horarios y promociones especiales."
   },
   {
     id: 1,
     title: "Sitio Web de Sistemas contra Incendios",
     description:
-      "El proyecto 'Sitio Web de Sistemas contra Incendios' consiste en el desarrollo de una plataforma digital informativa y funcional dedicada a la promoción, venta y asesoría de sistemas de prevención y protección contra incendios. El sitio incluirá catálogos de productos, guías de instalación, normativas de seguridad, y un apartado de contacto para consultas técnicas. Su objetivo es ser una herramienta clave para profesionales y empresas del sector, ofreciendo soluciones integrales y actualizadas en materia de seguridad contra incendios.",
+      "Plataforma digital informativa dedicada a la promoción y venta de sistemas de prevención y protección contra incendios.",
     thumbnail: "/imgs/projects/image.png",
     duration: "4 Dias",
-    technologies: ["React Vite", "Tailwin", "Cloudflare"],
+    technologies: ["React Vite", "Tailwind", "Cloudflare"],
     websiteUrl: "https://sistemacontraincendios.pages.dev/",
     repoUrl: "https://github.com/BarretoPalacios/Proyecto-Web-de-Incendios",
     isPrivate: false,
@@ -47,28 +47,28 @@ const projects = [
       "/imgs/projects/p3-img.jpg",
     ],
     fullDescription:
-      "El proyecto 'Sitio Web de Sistemas contra Incendios' consiste en el desarrollo de una plataforma digital informativa y funcional dedicada a la promoción, venta y asesoría de sistemas de prevención y protección contra incendios. El sitio incluirá catálogos de productos, guías de instalación, normativas de seguridad, y un apartado de contacto para consultas técnicas. Su objetivo es ser una herramienta clave para profesionales y empresas del sector, ofreciendo soluciones integrales y actualizadas en materia de seguridad contra incendios.",
+      "Plataforma digital informativa y funcional dedicada a la promoción, venta y asesoría de sistemas de prevención y protección contra incendios.",
   },
   {
     id: 2,
     title: "Pagina Web Barberia Valentinos",
     description:
-      "Barbería Valentinos es tu destino de confianza para un cuidado capilar y de barba de primera calidad. Nuestra página web ofrece una experiencia intuitiva y moderna, donde podrás explorar nuestros servicios, desde cortes clásicos y modernos hasta tratamientos de barba y cuidado facial. Con un diseño elegante y funcional, te permitimos reservar citas en línea de manera rápida y sencilla, conocer a nuestro talentoso equipo de barberos y descubrir promociones exclusivas. En Barbería Valentinos, combinamos tradición y estilo para brindarte un servicio premium. ¡Visítanos y déjanos consentirte!",
+      "Destino de confianza para un cuidado capilar y de barba de primera calidad con reservas en línea y galería de servicios.",
     thumbnail: "/imgs/projects/p4-img.jpg",
     duration: "2 Dias",
-    technologies: ["HTML", "Tailwin", "JavaScript", "Cloudflare"],
+    technologies: ["HTML", "Tailwind", "JavaScript", "Cloudflare"],
     websiteUrl: "https://valentinobarber.pages.dev/",
     repoUrl: "https://github.com/BarretoPalacios/Landig-Barber",
     isPrivate: false,
     images: ["/imgs/projects/p4-img.jpg", "/imgs/projects/p5-img.jpg"],
     fullDescription:
-      "Barbería Valentinos es tu destino de confianza para un cuidado capilar y de barba de primera calidad. Nuestra página web ofrece una experiencia intuitiva y moderna, donde podrás explorar nuestros servicios, desde cortes clásicos y modernos hasta tratamientos de barba y cuidado facial. Con un diseño elegante y funcional, te permitimos reservar citas en línea de manera rápida y sencilla, conocer a nuestro talentoso equipo de barberos y descubrir promociones exclusivas. En Barbería Valentinos, combinamos tradición y estilo para brindarte un servicio premium. ¡Visítanos y déjanos consentirte!",
+      "Barbería Valentinos es tu destino de confianza para un cuidado capilar y de barba de primera calidad.",
   },
   {
     id: 3,
     title: "Landing Page para la gestión de presupuestos",
     description:
-      "¡Próximamente! Estamos trabajando en una Landing Page de Gestión de Presupuestos que revolucionará la forma en que organizas tus finanzas. Este proyecto, actualmente en construcción, te ofrecerá herramientas intuitivas para crear, monitorear y optimizar tu presupuesto personal o empresarial. Con gráficos claros, alertas personalizadas y consejos prácticos, te ayudaremos a tomar el control de tus finanzas de manera sencilla. ¡Mantente atento! Pronto tendrás acceso a esta plataforma diseñada para simplificar tu vida financiera.",
+      "¡Próximamente! Plataforma para crear, monitorear y optimizar tu presupuesto personal o empresarial.",
     thumbnail: "/imgs/projects/p6-img.jpg",
     duration: "En Desarrollo",
     technologies: ["React.js Vite", "FastAPI", "MongoDB", "Digital Ocean"],
@@ -79,26 +79,9 @@ const projects = [
       "/imgs/projects/p6-img.jpg", "/imgs/projects/p7-img.jpg"
     ],
     fullDescription:
-      "¡Próximamente! Estamos trabajando en una Landing Page de Gestión de Presupuestos que revolucionará la forma en que organizas tus finanzas. Este proyecto, actualmente en construcción, te ofrecerá herramientas intuitivas para crear, monitorear y optimizar tu presupuesto personal o empresarial. Con gráficos claros, alertas personalizadas y consejos prácticos, te ayudaremos a tomar el control de tus finanzas de manera sencilla. ¡Mantente atento! Pronto tendrás acceso a esta plataforma diseñada para simplificar tu vida financiera.",
+      "Plataforma en construcción para la gestión de presupuestos personales y empresariales.",
   },
-  {
-    id: 4,
-    title: "Sistema y Pagina Web para La Casa de Salam",
-    description:
-      "En La Casa de Salam, hemos desarrollado un Sistema de Venta de Productos para Mascotas que lo tiene todo. Nuestra plataforma está diseñada para ofrecer una experiencia de compra fácil y rápida, con una amplia variedad de productos para todo tipo de mascotas: alimentos, accesorios, juguetes, medicamentos y más. Con un diseño intuitivo y seguro, los clientes pueden explorar categorías, filtrar por necesidades específicas y realizar compras en pocos clics. Además, incluimos funcionalidades como recomendaciones personalizadas, envíos rápidos y un sistema de seguimiento de pedidos. La Casa de Salam es la solución perfecta para quienes buscan lo mejor para sus mascotas.",
-    thumbnail: "/imgs/projects/p11-img.jpg",
-    duration: "1 mes ",
-    technologies: ["React.js Vite","Tailwin", "FastAPI","Posgre SQL", "Render"],
-    websiteUrl: "https://salam-front.onrender.com/",
-    repoUrl: "https://github.com/BarretoPalacios/salam-front",
-    isPrivate: false,
-    images: [
-      "/imgs/projects/p11-img.jpg", "/imgs/projects/p10-img.jpg",
-       "/imgs/projects/p9-img.jpg", "/imgs/projects/p8-img.jpg"
-    ],
-    fullDescription:
-      "En La Casa de Salam, hemos desarrollado un Sistema de Venta de Productos para Mascotas que lo tiene todo. Nuestra plataforma está diseñada para ofrecer una experiencia de compra fácil y rápida, con una amplia variedad de productos para todo tipo de mascotas: alimentos, accesorios, juguetes, medicamentos y más. Con un diseño intuitivo y seguro, los clientes pueden explorar categorías, filtrar por necesidades específicas y realizar compras en pocos clics. Además, incluimos funcionalidades como recomendaciones personalizadas, envíos rápidos y un sistema de seguimiento de pedidos. La Casa de Salam es la solución perfecta para quienes buscan lo mejor para sus mascotas.",
-  }
+  
 ];
 
 export default function Projects() {
@@ -113,33 +96,37 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-16 bg-secondary/30 ">
+    <section id="projects" className="py-16 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white border border-border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              className="bg-gradient-to-br from-[#3836FE] to-black border border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all cursor-pointer hover:-translate-y-1"
               onClick={() => openModal(project)}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden group">
                 <img
                   src={project.thumbnail || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center transition-transform hover:scale-105 duration-300"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <h3 className="text-xl font-bold text-white">
+                    {project.title}
+                  </h3>
+                </div>
               </div>
+              
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 line-clamp-4">
+                <p className="text-gray-300 mb-4 line-clamp-3">
                   {project.description}
                 </p>
 
-                <div className="flex items-center mb-4 text-green-600">
-                  <Clock className="h-4 w-4 text-muted-foreground mr-2" />
-                  <span className="text-sm text-muted-foreground">
+                <div className="flex items-center mb-4">
+                  <Clock className="h-4 w-4 text-purple-400 mr-2" />
+                  <span className="text-sm text-gray-400">
                     {project.duration}
                   </span>
                 </div>
@@ -149,7 +136,7 @@ export default function Projects() {
                     {project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-[#3836FE] px-2 py-1 bg-primary/10 text-white text-xs rounded-full"
+                        className="bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 text-white text-xs rounded-full"
                       >
                         {tech}
                       </span>
@@ -157,38 +144,38 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between mt-4">
+                <div className="flex items-center justify-between mt-6">
                   {project.websiteUrl ? (
                     <a
                       href={project.websiteUrl}
-                      className="text-primary hover:text-primary/80 flex items-center text-sm text-blue-600"
+                      className="text-white hover:text-purple-300 flex items-center text-sm bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 rounded-lg transition-all"
                       onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <ExternalLink className="h-4 w-4 mr-1" />
-                      Website
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Visitar
                     </a>
                   ) : (
-                    <span className="text-muted-foreground text-sm flex items-center gap-1 text-red-600">
-                      <LockIcon size={12} /> Private Project
+                    <span className="text-gray-400 text-sm flex items-center gap-1 bg-gray-800 px-4 py-2 rounded-lg">
+                      <LockIcon size={14} /> Proyecto Privado
                     </span>
                   )}
 
                   {project.repoUrl ? (
                     <a
                       href={project.repoUrl}
-                      className="text-primary hover:text-primary/80 flex items-center text-sm"
+                      className="text-white hover:text-purple-300 flex items-center text-sm bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-all"
                       onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <GitGraphIcon className="h-4 w-4 mr-1" />
-                      Repository
+                      <GitGraphIcon className="h-4 w-4 mr-2" />
+                      Repositorio
                     </a>
                   ) : (
-                    <span className="text-muted-foreground text-sm flex items-center gap-1 text-red-600">
-                      <LockIcon size={12} /> Private Repo
+                    <span className="text-gray-400 text-sm flex items-center gap-1 bg-gray-800 px-4 py-2 rounded-lg">
+                      <LockIcon size={14} /> Privado
                     </span>
                   )}
                 </div>

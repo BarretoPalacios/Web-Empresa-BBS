@@ -17,8 +17,6 @@ export default function ProjectModal({ project, onClose }) {
     }
 
     window.addEventListener("keydown", handleKeyDown)
-
-    // Prevent scrolling when modal is open
     document.body.style.overflow = "hidden"
 
     return () => {
@@ -28,14 +26,17 @@ export default function ProjectModal({ project, onClose }) {
   }, [onClose])
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === project.images.length - 1 ? 0 : prevIndex + 1))
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
+    )
   }
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? project.images.length - 1 : prevIndex - 1))
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
+    )
   }
 
-  // Close modal when clicking outside the content
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose()
@@ -43,16 +44,22 @@ export default function ProjectModal({ project, onClose }) {
   }
 
   return (
-    <div className=" fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" onClick={handleBackdropClick}>
+    <div 
+      className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+      onClick={handleBackdropClick}
+    >
       <div
-        className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+        className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center p-4 border-b border-border">
-          <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+        {/* Header */}
+        <div className="flex justify-between items-center p-6 border-b border-gray-700">
+          <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+            {project.title}
+          </h3>
           <button
             onClick={onClose}
-            className="p-1 rounded-full hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors"
+            className="p-2 rounded-full hover:bg-gray-700 text-gray-300 hover:text-white transition-all"
             aria-label="Close modal"
           >
             <X className="h-6 w-6" />
@@ -61,18 +68,18 @@ export default function ProjectModal({ project, onClose }) {
 
         <div className="overflow-y-auto flex-grow">
           {/* Image carousel */}
-          <div className="relative">
-            <div className="h-[300px] md:h-[400px] bg-black relative">
+          <div className="relative group">
+            <div className="h-[300px] md:h-[400px] bg-black relative overflow-hidden">
               <img
                 src={project.images[currentImageIndex] || "/placeholder.svg"}
                 alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain transition-opacity duration-300"
               />
 
               {/* Navigation arrows */}
               <button
                 onClick={prevImage}
-                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gray-900/80 text-white hover:bg-gray-800 transition-all opacity-0 group-hover:opacity-100"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="h-6 w-6" />
@@ -80,7 +87,7 @@ export default function ProjectModal({ project, onClose }) {
 
               <button
                 onClick={nextImage}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gray-900/80 text-white hover:bg-gray-800 transition-all opacity-0 group-hover:opacity-100"
                 aria-label="Next image"
               >
                 <ChevronRight className="h-6 w-6" />
@@ -92,7 +99,7 @@ export default function ProjectModal({ project, onClose }) {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-white/50"}`}
+                    className={`w-3 h-3 rounded-full transition-all ${index === currentImageIndex ? "bg-purple-500 w-6" : "bg-gray-500 hover:bg-gray-400"}`}
                     aria-label={`Go to image ${index + 1}`}
                   />
                 ))}
@@ -101,26 +108,29 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Project details */}
-          <div className="p-6">
-            <div className="flex flex-wrap gap-4 mb-6">
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center">
-                <Clock className="h-5 w-5 text-primary mr-2" />
-                <span className="text-foreground">Duration: {project.duration}</span>
+                <Clock className="h-5 w-5 text-purple-400 mr-2" />
+                <span className="text-gray-300">Duración: {project.duration}</span>
               </div>
 
               <div className="flex items-center">
-                <Calendar className="h-5 w-5 text-primary mr-2" />
-                <span className="text-foreground">Completed: 2023</span>
+                <Calendar className="h-5 w-5 text-blue-400 mr-2" />
+                <span className="text-gray-300">Completado: 2025</span>
               </div>
             </div>
 
-            <h4 className="text-lg font-semibold mb-3">Project Overview</h4>
-            <p className="text-muted-foreground mb-6">{project.fullDescription}</p>
+            <h4 className="text-xl font-semibold mb-4 text-white">Descripción del Proyecto</h4>
+            <p className="text-gray-300 mb-8 leading-relaxed">{project.fullDescription}</p>
 
-            <h4 className="text-lg font-semibold mb-3">Technologies Used</h4>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <h4 className="text-xl font-semibold mb-4 text-white">Tecnologías Utilizadas</h4>
+            <div className="flex flex-wrap gap-3 mb-8">
               {project.technologies.map((tech, index) => (
-                <span key={index} className="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                <span 
+                  key={index} 
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600/30 to-blue-600/30 text-white rounded-full border border-purple-500/20"
+                >
                   {tech}
                 </span>
               ))}
@@ -130,30 +140,31 @@ export default function ProjectModal({ project, onClose }) {
               {project.websiteUrl && (
                 <a
                   href={project.websiteUrl}
-                  className="flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  className="flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Visit Website
+                  <ExternalLink className="h-5 w-5 mr-2" />
+                  Visitar Sitio
                 </a>
               )}
 
               {project.repoUrl && (
                 <a
                   href={project.repoUrl}
-                  className="flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
+                  className="flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all border border-gray-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className="h-4 w-4 mr-2" />
-                  View Repository
+                  <Github className="h-5 w-5 mr-2" />
+                  Ver Repositorio
                 </a>
               )}
 
               {!project.repoUrl && project.isPrivate && (
-                <div className="flex items-center px-4 py-2 bg-muted text-muted-foreground rounded-md">
-                  <span>Private Repository</span>
+                <div className="flex items-center px-6 py-3 bg-gray-800 text-gray-400 rounded-lg border border-gray-700">
+                  <LockIcon className="h-5 w-5 mr-2" />
+                  <span>Repositorio Privado</span>
                 </div>
               )}
             </div>
@@ -163,4 +174,3 @@ export default function ProjectModal({ project, onClose }) {
     </div>
   )
 }
-

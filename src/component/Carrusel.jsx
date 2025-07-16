@@ -1,146 +1,233 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
-const Carrusel = () => {
+const FullScreenCarousel = () => {
   const projects = [
     {
-      "title": "Sitio Web de Sistemas contra Incendios",
-      "description": "El proyecto 'Sitio Web de Sistemas contra Incendios' consiste en el desarrollo de una plataforma digital informativa y funcional dedicada a la promoción, venta y asesoría de sistemas de prevención y protección contra incendios. El sitio incluirá catálogos de productos, guías de instalación, normativas de seguridad, y un apartado de contacto para consultas técnicas. Su objetivo es ser una herramienta clave para profesionales y empresas del sector, ofreciendo soluciones integrales y actualizadas en materia de seguridad contra incendios.",
-      "tags": ["React Vite", "Tailwin", "Cloudflare"],
-      "important": ["Catálogos de Productos", "Guías de Instalación", "Normativas de Seguridad"],
-      "image": "/imgs/projects/image.png"
+      title: "Sitio Web de Sistemas contra Incendios",
+      description:
+        "Plataforma digital para promoción y venta de sistemas de prevención contra incendios con catálogos interactivos y guías técnicas.",
+      tags: ["React Vite", "Tailwind", "Cloudflare"],
+      features: [
+        "Catálogos interactivos",
+        "Guías de instalación",
+        "Normativas de seguridad",
+      ],
+      image: "/imgs/projects/image.png",
     },
     {
-      "title": "Pagina Web Barberia Valentinos",
-      "description": "Barbería Valentinos es tu destino de confianza para un cuidado capilar y de barba de primera calidad. Nuestra página web ofrece una experiencia intuitiva y moderna, donde podrás explorar nuestros servicios, desde cortes clásicos y modernos hasta tratamientos de barba y cuidado facial. Con un diseño elegante y funcional, te permitimos reservar citas en línea de manera rápida y sencilla, conocer a nuestro talentoso equipo de barberos y descubrir promociones exclusivas. En Barbería Valentinos, combinamos tradición y estilo para brindarte un servicio premium. ¡Visítanos y déjanos consentirte!",
-      "tags": ["HTML", "Tailwin", "JavaScript", "Cloudflare"],
-      "important": ["Reserva de Citas", "Diseño Elegante", "Promociones Exclusivas"],
-      "image": "/imgs/projects/p4-img.jpg"
+      title: "Barbería Valentinos",
+      description:
+        "Sistema de reservas online para una experiencia de barbería premium con gestión de citas y promociones exclusivas.",
+      tags: ["HTML", "Tailwind", "JavaScript"],
+      features: ["Reserva online", "Galería de trabajos", "Promociones"],
+      image: "/imgs/projects/p4-img.jpg",
     },
     {
-      "title": "Landing Page para la gestión de presupuestos",
-      "description": "¡Próximamente! Estamos trabajando en una Landing Page de Gestión de Presupuestos que revolucionará la forma en que organizas tus finanzas. Este proyecto, actualmente en construcción, te ofrecerá herramientas intuitivas para crear, monitorear y optimizar tu presupuesto personal o empresarial. Con gráficos claros, alertas personalizadas y consejos prácticos, te ayudaremos a tomar el control de tus finanzas de manera sencilla. ¡Mantente atento! Pronto tendrás acceso a esta plataforma diseñada para simplificar tu vida financiera.",
-      "tags": ["React.js Vite", "FastAPI", "MongoDB", "Digital Ocean"],
-      "important": ["Gráficos Claros", "Alertas Personalizadas", "Consejos Prácticos"],
-      "image": "/imgs/projects/p6-img.jpg"
+      title: "Gestión de Presupuestos",
+      description:
+        "Dashboard financiero con visualización de datos en tiempo real y alertas personalizadas para mejor control económico.",
+      tags: ["React.js", "FastAPI", "MongoDB"],
+      features: [
+        "Gráficos interactivos",
+        "Alertas personalizadas",
+        "Sincronización bancaria",
+      ],
+      image: "/imgs/projects/p6-img.jpg",
     },
-    {
-      "title": "Sistema y Pagina Web para La Casa de Salam",
-      "description": "En La Casa de Salam, hemos desarrollado un Sistema de Venta de Productos para Mascotas que lo tiene todo. Nuestra plataforma está diseñada para ofrecer una experiencia de compra fácil y rápida, con una amplia variedad de productos para todo tipo de mascotas: alimentos, accesorios, juguetes, medicamentos y más. Con un diseño intuitivo y seguro, los clientes pueden explorar categorías, filtrar por necesidades específicas y realizar compras en pocos clics. Además, incluimos funcionalidades como recomendaciones personalizadas, envíos rápidos y un sistema de seguimiento de pedidos. La Casa de Salam es la solución perfecta para quienes buscan lo mejor para sus mascotas.",
-      "tags": ["React.js Vite", "Tailwin", "FastAPI", "Posgre SQL", "Render"],
-      "important": ["Experiencia de Compra Fácil", "Recomendaciones Personalizadas", "Seguimiento de Pedidos"],
-      "image": "/imgs/projects/p11-img.jpg"
-    }
-  ]
-  
+    
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartX = useRef(null);
-  const touchEndX = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const carouselRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    );
   };
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Auto-rotate only when not hovered
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX.current && touchEndX.current) {
-      const difference = touchStartX.current - touchEndX.current;
-      if (difference > 70) {
+    if (!isHovered) {
+      const timer = setInterval(() => {
         nextSlide();
-      } else if (difference < -70) {
-        prevSlide();
-      }
+      }, 5000);
+      return () => clearInterval(timer);
     }
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };
+  }, [currentIndex, isHovered]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const currentProject = projects[currentIndex];
 
   return (
-   <>
-    <h2 className="m-auto w-1/2 md:w-full text-4xl  md:text-5xl py-8 md:py-12 dynapuff-font text-center text-white ">
-       Proyectos Recientes
-  </h2>
-    <div className="w-full max-w-4xl mx-auto px-4 py-8 relative">
-      <div 
-        className="overflow-hidden shadow-lg rounded-lg"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+    <section
+      className="relative w-full h-[800px] overflow-hidden rounded-2xl 
+              shadow-[0_5px_15px_rgba(56,54,254,0.2),0_15px_35px_rgba(56,54,254,0.25)]"
+      ref={carouselRef}
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={currentProject.image}
+          alt={currentProject.title}
+          className="w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out"
+        />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+      </div>
+
+      {/* Content Overlay */}
+      <div
+        className="relative z-10 h-full flex flex-col justify-center px-8 sm:px-16 md:px-24 lg:px-32 xl:px-48 py-20"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="flex flex-col md:flex-row transition-transform duration-300 ease-in-out">
-          <div className="w-full md:w-1/2 bg-white" >
-            <img
-              src={currentProject.image}
-              alt={currentProject.title}
-              className="w-full h-48 md:h-full object-cover"
+        {/* Project Tags */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {currentProject.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-6 py-2 rounded-full bg-white text-black hover:shadow-lg transition-all"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Project Title */}
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 max-w-4xl">
+          {currentProject.title}
+        </h2>
+
+        {/* Project Description */}
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl">
+          {currentProject.description}
+        </p>
+
+        {/* Features List */}
+        <ul className="mb-12 space-y-3">
+          {currentProject.features.map((feature, index) => (
+            <li key={index} className="flex items-center">
+              <svg
+                className="w-6 h-6 text-white mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span className="text-white text-lg sm:text-xl">{feature}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA Button */}
+        <div className="mt-auto">
+          <a
+            href="/projects"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#3836FE] rounded-full font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105"
+          >
+            Ver proyecto completo
+            <svg
+              className="w-5 h-5 ml-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-8 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-all"
+          aria-label="Previous project"
+        >
+          <svg
+            className="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 19l-7-7 7-7"
             />
-          </div>
-          <div className="w-full md:w-1/2 p-6 flex flex-col justify-between bg-white">
-            <div>
-              <h2 className="text-3xl font-bold mb-2">{currentProject.title}</h2>
-              <p className="text-sm text-gray-600 mb-4">
-                {currentProject.description}
-              </p>
-              <div className="flex flex-wrap gap-2 ">
-                {currentProject.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 bg-black  text-white text-xs rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-             <h3 className='pt-2 text-xl font-bold mb-2 text-black '>Puntos Importantes</h3>
-             <ul className=' list-disc list-inside mb-4'>
-              {currentProject.important.map((text,index)=>(
-                 <li key={index}>{text}</li>
-              ))}
-              </ul>
-            </div>
-            
-          </div>
+          </svg>
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-8 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-all"
+          aria-label="Next project"
+        >
+          <svg
+            className="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+
+        {/* Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                currentIndex === index ? "bg-white w-8" : "bg-white/50"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-100"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-100"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div></>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/30 to-transparent"></div>
+    </section>
   );
 };
 
-export default Carrusel;
+export default FullScreenCarousel;

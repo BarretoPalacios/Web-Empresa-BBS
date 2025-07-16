@@ -1,117 +1,109 @@
+import Footer from "../component/Footer";
 import Navbar from "../component/Navbar";
+import WhatsAppButton from "../component/WhatsAppButton";
 
 function MorePage() {
   return (
-    <div className="bg-white ">
+    <>
+    <div className="bg-black min-h-screen">
       <Navbar />
-      <a
-        href="https://wa.me/51933238447?text=Hola,%20vi%20tu%20página%20web%20y%20estoy%20interesado%20en%20tus%20servicios"
-        className="z-30 fixed  bottom-2 right-2 bg-black p-4 rounded-full animate-bounce "
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={24}
-          height={24}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth={2}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp "
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-        </svg>
-      </a>
-      <div className="pt-36 flex  flex-col  items-center w-full gap-10 bg-[#3836FE] flex-wrap overflow-hidden">
-        <img
-          src="logo-icon-white.svg"
-          className="max-w-[200px] md:max-w-[350px] drop-shadow-xl hover:scale-105 transition-transform"
-        />
-        <h2 className="w-auto pb-12  md:w-full animate__animated animate__rubberBand animate__repeat-1 animate__slower text-5xl  text-center py-2 md:py-10 dynapuff-font  text-white drop-shadow-lg  ">
-          Web Nova Solutions
-        </h2>
+      
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
+
+      {/* Hero Section */}
+      <div className="pt-28 pb-20 bg-gradient-to-b from-[#3836FE] to-black">
+        <div className="container mx-auto px-4 flex flex-col items-center gap-8 text-center">
+          <img
+            src="logo-icon-white.svg"
+            className="max-w-[200px] md:max-w-[350px] drop-shadow-xl hover:scale-105 transition-transform duration-300"
+            alt="Web Nova Solutions"
+          />
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+            Web <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Nova Solutions</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl">
+            Innovación y tecnología para transformar tu negocio
+          </p>
+        </div>
       </div>
 
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-        className="w-full overflow-hidden"
-        fill="#3836FE"
-      >
-        <path
-          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-          opacity=".25"
-          className="shape-fill"
-        ></path>
-        <path
-          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-          opacity=".5"
-          className="shape-fill"
-        ></path>
-        <path
-          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-          className="shape-fill"
-        ></path>
-      </svg>
-      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
-        Historia
-      </h3>
-      <p className="w-full p-4 md:max-w-2xl  m-auto">
-        Nova Solutions RUC:20613267493 nació con la firme convicción de que no solo los adultos
-        pueden lograr grandes cosas. Creemos que todo lo que se necesita es un
-        objetivo que inspire nuestra mente y corazón, y, por supuesto, mucho
-        esfuerzo. Somos un grupo de jóvenes con una visión a largo plazo,
-        dispuestos a desafiar todo obstáculo que se nos presente. <br />
-        No sabemos qué nos deparará el futuro, pero sabemos que nuestra
-        determinación y nuestras ganas de aprender y crecer nos llevarán a
-        alcanzar grandes logros. Nuestro propósito es llevar nuestro
-        conocimiento a lugares donde se pueda hacer una diferencia real y
-        brindar soluciones que hagan la vida más fácil a nuestros clientes. En
-        Nova Solutions, no nos rendimos ante los desafíos; más bien, los
-        enfrentamos con pasión, creatividad y el deseo de mejorar el mundo que
-        nos rodea.
-      </p>
-      <img
-        src="/history.svg"
-        alt=""
-        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
-      />
-      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
-        Mision
-      </h3>
-      <p className="w-full p-4 md:max-w-2xl  m-auto">
-        La misión de Nova Solutions es ofrecer soluciones innovadoras y
-        accesibles que faciliten la vida de nuestros clientes, aprovechando el
-        conocimiento y la pasión de un equipo joven y comprometido con el
-        futuro. Nos esforzamos por transformar desafíos en oportunidades a
-        través de la tecnología, el esfuerzo y el trabajo en equipo.
-      </p>
-      <img
-        src="/mision.svg"
-        alt=""
-        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
-      />
-      <h3 className="w-auto  md:w-full text-4xl  text-center px-14 py-8  md:py-10 dynapuff-font  text-[#3836FE]  drop-shadow-lg  ">
-        Vision
-      </h3>
-      <p className="w-full p-4 md:max-w-2xl  m-auto">
-        La visión de Nova Solutions es convertirnos en una startup tecnológica
-        líder, especializada en la automatización de procesos. Queremos ser
-        reconocidos por desarrollar soluciones innovadoras que optimicen la
-        eficiencia y productividad de las empresas, ayudándolas a enfrentar los
-        desafíos del futuro de manera más ágil y efectiva.
-      </p>
-      <img
-        src="/vision.svg"
-        alt=""
-        className="m-auto w-full md:w-1/3 drop-shadow-xl hover:scale-105 transition-transform"
-      />
+      {/* Content Sections */}
+      <div className="container mx-auto px-4 py-16 space-y-24">
+        {/* Historia Section */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <div className="bg-[#3836FE]/10 rounded-full w-fit px-6 py-2 mb-6">
+              <span className="text-[#3836FE] font-semibold">Nuestros Orígenes</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Nuestra <span className="text-[#3836FE]">Historia</span>
+            </h3>
+            <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+              Nova Solutions RUC:20613267493 nació con la firme convicción de que no solo los adultos pueden lograr grandes cosas. Creemos que todo lo que se necesita es un objetivo que inspire nuestra mente y corazón, y, por supuesto, mucho esfuerzo.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Somos un grupo de jóvenes con una visión a largo plazo, dispuestos a desafiar todo obstáculo que se nos presente. Nuestro propósito es llevar nuestro conocimiento a lugares donde se pueda hacer una diferencia real y brindar soluciones que hagan la vida más fácil a nuestros clientes.
+            </p>
+          </div>
+          <div className="lg:w-1/2 flex justify-center">
+            <img 
+              src="/history.svg" 
+              alt="Nuestra Historia"
+              className="w-full max-w-md rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        {/* Misión Section */}
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-center bg-gradient-to-br from-[#3836FE] to-black rounded-3xl p-8 border border-gray-700">
+          <div className="lg:w-1/2">
+            <div className="bg-[#3836FE]/10 rounded-full w-fit px-6 py-2 mb-6">
+              <span className="text-[#3836FE] font-semibold">Nuestro Propósito</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Nuestra <span className="text-[#3836FE]">Misión</span>
+            </h3>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              La misión de Nova Solutions es ofrecer soluciones innovadoras y accesibles que faciliten la vida de nuestros clientes, aprovechando el conocimiento y la pasión de un equipo joven y comprometido con el futuro. Nos esforzamos por transformar desafíos en oportunidades a través de la tecnología, el esfuerzo y el trabajo en equipo.
+            </p>
+          </div>
+          <div className="lg:w-1/2 flex justify-center">
+            <img 
+              src="/mision.svg" 
+              alt="Nuestra Misión"
+              className="w-full max-w-md rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        {/* Visión Section */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <div className="bg-[#3836FE]/10 rounded-full w-fit px-6 py-2 mb-6">
+              <span className="text-[#3836FE] font-semibold">Nuestro Futuro</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Nuestra <span className="text-[#3836FE]">Visión</span>
+            </h3>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              La visión de Nova Solutions es convertirnos en una startup tecnológica líder, especializada en la automatización de procesos. Queremos ser reconocidos por desarrollar soluciones innovadoras que optimicen la eficiencia y productividad de las empresas, ayudándolas a enfrentar los desafíos del futuro de manera más ágil y efectiva.
+            </p>
+          </div>
+          <div className="lg:w-1/2 flex justify-center">
+            <img 
+              src="/vision.svg" 
+              alt="Nuestra Visión"
+              className="w-full max-w-md rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+
+    
     </div>
+    <Footer />
+    </>
   );
 }
 

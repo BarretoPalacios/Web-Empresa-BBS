@@ -1,173 +1,111 @@
-import {  useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Home, Folder, Settings, Users, X, Menu } from 'lucide-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Función para determinar si el enlace está activo
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <>
-      <nav className="z-10 fixed top-0 left-0 right-0 mt-4 m-auto bg-white rounded-full w-full max-w-[1200px]  flex items-center justify-between flex-wrap  sm:justify-evenly p-6 shadow-lg">
-        {/* logo de la empresa */}
-        <Link to={"/"} className="">
-          <img src="logo-icon-blue.svg" alt="" className="max-w-10" />
+      <nav className="z-[100] fixed top-0 left-0 right-0 mt-4 m-auto backdrop-blur-md bg-[#3836FE]/20 border border-white/10 rounded-full w-full max-w-[1200px] flex items-center justify-between flex-wrap sm:justify-evenly p-4 sm:p-6 shadow-lg">
+        {/* Logo de la empresa */}
+        <Link to={"/"} className="flex items-center">
+          <img 
+            src="logo-icon-white.svg" 
+            alt="logo de la empresa webnova solutions" 
+            className="w-10 h-10"
+          />
         </Link>
-        {/* links del navbar  */}
-        <div className="hidden sm:flex justify-evenly gap-4 w-3/4 ">
-          <Link to={"/"} className=" text-white capitalize font-medium">
+
+        {/* Links del navbar - Desktop */}
+        <div className="hidden sm:flex justify-center gap-8 w-3/4">
+          <Link 
+            to={"/"} 
+            className={`text-lg capitalize font-medium transition-colors ${isActive('/') ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+          >
             Inicio
           </Link>
           <Link
             to={"/projects"}
-            className="text-[#3836fe] capitalize font-medium"
+            className={`text-lg capitalize font-medium transition-colors ${isActive('/projects') ? 'text-white' : 'text-gray-400 hover:text-white'}`}
           >
-            Projectos
+            Proyectos
           </Link>
           <Link
             to={"/services"}
-            className="text-[#3836fe] capitalize font-medium"
+            className={`text-lg capitalize font-medium transition-colors ${isActive('/services') ? 'text-white' : 'text-gray-400 hover:text-white'}`}
           >
             Servicios
           </Link>
-          <Link to={"/more"} className="text-[#3836fe] capitalize font-medium">
+          <Link 
+            to={"/more"} 
+            className={`text-lg capitalize font-medium transition-colors ${isActive('/more') ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+          >
             Nosotros
           </Link>
         </div>
-        {/* boton de menu */}
-        <button className="sm:hidden" onClick={() => setIsOpen(true)}>
+
+        {/* Botón de menú móvil */}
+        <button 
+          className="sm:hidden p-2"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
           {isOpen ? (
-            <svg
-              color="#3836fe"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-x"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M18 6l-12 12" />
-              <path d="M6 6l12 12" />
-            </svg>
+            <X className="w-6 h-6 text-white" />
           ) : (
-            <svg
-              color="#3836fe"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 6l16 0" />
-              <path d="M4 12l16 0" />
-              <path d="M4 18l16 0" />
-            </svg>
+            <Menu className="w-6 h-6 text-white" />
           )}
         </button>
+
+        {/* Menú móvil */}
         <div
           onClick={() => setIsOpen(false)}
           className={`${
             isOpen ? "flex" : "hidden"
-          } z-20 absolute left-0 right-0 overflow-hidden -top-4 bottom-0 w-full h-screen  justify-center items-center bg-black/60 `}
+          } z-20 fixed inset-0 w-full h-screen bg-black/70 backdrop-blur-sm justify-center items-center`}
         >
-          <div className="w-full max-w-xs flex flex-col px-6 py-10 gap-5 rounded-md bg-white">
+          <div 
+            className="w-full max-w-xs flex flex-col px-6 py-8 gap-6 rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-700"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Link
               to={"/"}
-              className=" text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
+              className={`flex items-center gap-4 text-2xl font-medium transition-colors ${isActive('/') ? 'text-white' : 'text-[#3836fe]/80 hover:text-white'}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-pointer"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
-              </svg>
+              <Home className="w-6 h-6" />
               Inicio
             </Link>
             <Link
               to={"/projects"}
-              className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
+              className={`flex items-center gap-4 text-2xl font-medium transition-colors ${isActive('/projects') ? 'text-white' : 'text-[#3836fe]/80 hover:text-white'}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-pointer"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
-              </svg>
-              Projects
+              <Folder className="w-6 h-6" />
+              Proyectos
             </Link>
             <Link
               to={"/services"}
-              className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
+              className={`flex items-center gap-4 text-2xl font-medium transition-colors ${isActive('/services') ? 'text-white' : 'text-[#3836fe]/80 hover:text-white'}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-pointer"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
-              </svg>
-              Services
+              <Settings className="w-6 h-6" />
+              Servicios
             </Link>
             <Link
               to={"/more"}
-              className="text-[#3836fe] capitalize font-medium text-3xl flex items-center gap-4"
+              className={`flex items-center gap-4 text-2xl font-medium transition-colors ${isActive('/more') ? 'text-white' : 'text-[#3836fe]/80 hover:text-white'}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-pointer"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M7.904 17.563a1.2 1.2 0 0 0 2.228 .308l2.09 -3.093l4.907 4.907a1.067 1.067 0 0 0 1.509 0l1.047 -1.047a1.067 1.067 0 0 0 0 -1.509l-4.907 -4.907l3.113 -2.09a1.2 1.2 0 0 0 -.309 -2.228l-13.582 -3.904l3.904 13.563z" />
-              </svg>
+              <Users className="w-6 h-6" />
               Nosotros
             </Link>
           </div>
         </div>
       </nav>
-     
     </>
   );
 }
