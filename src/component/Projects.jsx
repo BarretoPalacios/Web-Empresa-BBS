@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   ExternalLink,
-  Github,
+
   Clock,
   LockIcon,
   GitGraphIcon,
@@ -10,8 +10,28 @@ import ProjectModal from "./ProjectModal";
 
 // Sample project data
 const projects = [
+   {
+    id: 1,
+    title: "Sitio Web para la empresa Transjer Operador Logistico",
+    description:
+      "Sitio web informativo para la empresa Transjer, especializado en logística y transporte, con servicios de carga y asesoría.",
+    thumbnail:  "/imgs/projects/tranjer-1.png",
+    duration: "2 Semanas",
+    technologies: ["React Vite", "Tailwind", "Cloudflare Pages","Dominios Propios"],
+    websiteUrl: "https://transjer.com.pe/",
+    repoUrl: "",
+    isPrivate: true,
+    images: [
+      "/imgs/projects/tranjer-1.png",
+      "/imgs/projects/tranjer-2.png",
+      "/imgs/projects/tranjer-3.png",
+      "/imgs/projects/tranjer-4.png",
+    ],
+    fullDescription:
+      "La pagina web de Transjer es una plataforma informativa dedicada a la empresa Transjer, especializada en logística y transporte. El sitio ofrece una visión general de los servicios de carga, asesoría y soluciones logísticas que la empresa proporciona a sus clientes.",
+  },
   {
-    id: 5,
+    id: 2,
     title: "Sitio Web para Gimnasio",
     description:
       "Plataforma digital para promocionar y gestionar un gimnasio moderno con información sobre membresías, clases, entrenadores y más.",
@@ -30,7 +50,7 @@ const projects = [
       "El proyecto 'Sitio Web para Gimnasio' es una plataforma digital diseñada para promocionar y gestionar un gimnasio moderno. El sitio incluye información detallada sobre membresías, clases grupales, entrenadores personales, horarios y promociones especiales."
   },
   {
-    id: 1,
+    id: 3,
     title: "Sitio Web de Sistemas contra Incendios",
     description:
       "Plataforma digital informativa dedicada a la promoción y venta de sistemas de prevención y protección contra incendios.",
@@ -50,7 +70,7 @@ const projects = [
       "Plataforma digital informativa y funcional dedicada a la promoción, venta y asesoría de sistemas de prevención y protección contra incendios.",
   },
   {
-    id: 2,
+    id: 4,
     title: "Pagina Web Barberia Valentinos",
     description:
       "Destino de confianza para un cuidado capilar y de barba de primera calidad con reservas en línea y galería de servicios.",
@@ -65,7 +85,7 @@ const projects = [
       "Barbería Valentinos es tu destino de confianza para un cuidado capilar y de barba de primera calidad.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Landing Page para la gestión de presupuestos",
     description:
       "¡Próximamente! Plataforma para crear, monitorear y optimizar tu presupuesto personal o empresarial.",

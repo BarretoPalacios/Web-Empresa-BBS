@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Clock, Calendar } from "lucide-react"
+import { X, ChevronLeft, ChevronRight, ExternalLink, Github, Clock, Calendar, LockIcon } from "lucide-react"
 
 export default function ProjectModal({ project, onClose }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
